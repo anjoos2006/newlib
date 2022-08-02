@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 8080;
 
 
 // Connect to DB
-mongoose.connect(process.env.dbUrl, { useNewUrlParser: true }, () => { 
+mongoose.connect(process.env.dbUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, () => { 
     console.log("Connected to DB")
 });
 
